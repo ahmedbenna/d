@@ -3,6 +3,7 @@ import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import { Link } from 'react-router-dom'
@@ -45,12 +46,13 @@ export default function LoginDoc() {
   const classes = useStyles();
 
   return (
+    <div>
     <Container component="main" maxWidth="xs" style={{ backgroundColor: '#F0F0F0',borderRadius: "15px"
   }}>
       <CssBaseline />
       <div className={classes.paper}>
         <Typography component="h1" variant="h5">
-          Login Doctor
+          Se connecter
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -59,7 +61,7 @@ export default function LoginDoc() {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label="Address Email"
             name="email"
             autoComplete="email"
             autoFocus
@@ -70,7 +72,7 @@ export default function LoginDoc() {
             required
             fullWidth
             name="password"
-            label="Password"
+            label="Mote de passe"
             type="password"
             id="password"
             autoComplete="current-password"
@@ -82,11 +84,26 @@ export default function LoginDoc() {
                 variant="contained"
                 className={classes.submit}
             >
-                Sign In
+                Se connecter
             </Button>
           </Link>
         </form>
       </div>
     </Container>
+    <Container component="second" maxWidth="xs" style={{ marginTop:'20px', height:"80px", justifyContent:'center', alignContent:'center', backgroundColor: '#F0F0F0',borderRadius: "15px"}}>
+    <Grid
+      container
+      spacing={0}
+      alignItems="center"
+      justify="center"
+    >
+      <Grid item xs={3}>
+      <Link to='/components/Signup'className={classes.link}>
+            S'inscrire
+        </Link>
+      </Grid>   
+    </Grid>   
+  </Container>
+  </div>
   );
 }

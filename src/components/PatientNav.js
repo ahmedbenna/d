@@ -34,7 +34,7 @@ appbar:{
 
 
 
-export default function MainNav() {
+export default function PatientNav() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 

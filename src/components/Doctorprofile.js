@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme) => ({
     doc: {
         backgroundColor:'#8ADEFF',
     },
+    avatar: {
+        width: theme.spacing(8),
+        height: theme.spacing(8),
+    },
 
 
 }))
@@ -22,7 +26,7 @@ function Doctorprofile() {
         <div className={classes.doc}>
             ffff
             <Grid container>
-                <Grid item>
+                <Grid item xs={2}>
                     <Avatar className={classes.avatar} alt="img" src="../img/doctor_avatar.png"/>
                 </Grid>
                 <Grid item>

@@ -43,113 +43,121 @@ export default function Signup() {
 
 
   return (
-    <Container component="main" maxWidth="xs" style={{ backgroundColor: '#F0F0F0',borderRadius: "15px"
-  }}>
-      <CssBaseline />
-      <div className={classes.paper}>
-        <Typography component="h1" variant="h5">
-          Sign up
-        </Typography>
-        <form className={classes.form} noValidate>
-          <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                autoComplete="fname"
-                name="firstName"
-                variant="outlined"
-                required
-                fullWidth
-                id="firstName"
-                label="First Name"
-                autoFocus
-              />
+    <div>
+      <Container component="main" maxWidth="xs" style={{ backgroundColor: '#F0F0F0', borderRadius: "15px"}}>
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Typography component="h1" variant="h5">
+            S'inscrire
+          </Typography>
+          <form className={classes.form} noValidate>
+            <Grid container spacing={2}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  autoComplete="prenom"
+                  name="prenom"
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="prenom"
+                  label="Prenom"
+                  autoFocus
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="nom"
+                  label="Nom"
+                  name="nom"
+                  autoComplete="nom"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  id="email"
+                  label="Address Email"
+                  name="email"
+                  autoComplete="email"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="mote-de-passe"
+                  label="Mote-de-passe"
+                  type="mote-de-passe"
+                  id="mote-de-passe"
+                  autoComplete="mote-de-passe"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="telephone"
+                  label="Telephone"
+                  type="number"
+                  id="telephone"
+                  autoComplete="telephone"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="address"
+                  label="Address"
+                  id="address"
+                  autoComplete="address"
+                />
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  variant="outlined"
+                  required
+                  fullWidth
+                  name="date-de-naissance" 
+                  type="date"
+                  id="date-de-naissance"
+                  autoComplete="date-de-naissance"
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={12} sm={6}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="lastName"
-                label="Last Name"
-                name="lastName"
-                autoComplete="lname"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="phone"
-                label="Phone"
-                type="number"
-                id="Phone"
-                autoComplete="phone"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="address"
-                label="Address"
-                id="address"
-                autoComplete="address"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField
-                variant="outlined"
-                required
-                fullWidth
-                name="birthday" 
-                type="date"
-                id="birthday"
-                autoComplete="birthday"
-              />
-            </Grid>
-          </Grid>
-          <Button
-            type="submit"
-            fullWidth
-            variant="contained"
-            className={classes.submit}
-          >
-            Sign Up
-          </Button>
-          <Grid container justify="flex-end">
-            <Grid item>
-              <Link to='/components/Login' className={classes.link} >
-                Already have an account? Sign in
-              </Link>
-            </Grid>
-          </Grid>
-        </form>
-      </div>
-    </Container>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              className={classes.submit}
+            >
+              S'inscrire
+            </Button>
+          </form>
+        </div>
+      </Container>
+      <Container component="second" maxWidth="xs" style={{marginTop:'20px', height:"80px",  backgroundColor: '#F0F0F0',borderRadius: "15px"}}>
+        <Grid
+          container
+          spacing={0}
+          alignItems="center"
+          justify="center"
+        >
+          <Grid item xs={3}>
+            <Link to='/components/Login' className={classes.link} >
+                    Se connecter
+            </Link>
+          </Grid>   
+        </Grid>   
+      </Container>
+    </div>
   );
 }

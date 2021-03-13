@@ -44,66 +44,66 @@ export default function SignIn() {
 
 
   return (
-    <Container component="main" maxWidth="xs" style={{ height:"360px", backgroundColor: '#F0F0F0',borderRadius: "15px"}}>
-      <CssBaseline  />
-      <div className={classes.paper}>
-        <Typography component="h1" variant="h5" > 
-          Login
-        </Typography>
-        <form className={classes.form} noValidate>
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            name="email"
-            autoComplete="email"
-            autoFocus
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            name="password"
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-          />
-            <FormControlLabel
-            control={<Checkbox value="remember"  color="primary" />}
-           label="remember me"
-           />
-           
-         
-            <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                className={classes.submit}
-            >
-                Sign In
-            </Button>
-            
-          <Grid container>
-            <Grid item xs>
-              <Link className={classes.link}>
-                Forgot password?
-              </Link>
-            </Grid>
-            <Grid item>
-              <Link to='/components/Signup'className={classes.link}>
-                Don't have an account? Sign Up
-              </Link>
-            </Grid>
-          </Grid>
+    <div>
+      <Container component="main" maxWidth="xs" style={{ height:"350px", backgroundColor: '#F0F0F0',borderRadius: "15px"}}>
+        <CssBaseline  />
+        <div className={classes.paper}>
+          <Typography component="h1" variant="h5" > 
+            Se connecter
+          </Typography>
+          <form className={classes.form} noValidate>
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              id="email"
+              label="Address Email"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Mote de passe"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+        
           
-        </form>
-      </div>
-      
-    </Container>
+              <Button
+                  type="submit"
+                  fullWidth
+                  variant="contained"
+                  className={classes.submit}
+              >
+                  Se connecter
+              </Button>
+              <Link className={classes.link}>
+                mote de passe oublié?
+              </Link>
+          </form>
+        </div>
+      </Container>
+      <Container component="second" maxWidth="xs" style={{ marginTop:'20px', height:"80px", justifyContent:'center', alignContent:'center', backgroundColor: '#F0F0F0',borderRadius: "15px"}}>
+        <Grid
+          container
+          spacing={0}
+          alignItems="center"
+          justify="center"
+        >
+          <Grid item xs={3}>
+          <Link to='/components/Signup'className={classes.link}>
+                S'inscrire
+            </Link>
+          </Grid>   
+        </Grid>   
+      </Container>  
+    </div>
   );
 }
